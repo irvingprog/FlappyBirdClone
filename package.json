@@ -1,0 +1,14 @@
+{
+  "name": "flappybirdclone",
+  "version": "0.0.1",
+  "description": "Flappy Bird clone maked with Pilas Engine framework",
+  "main": "index.js",
+  "author": "Irving Prog",
+  "license": "GPL v3",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-typescript": "^0.3.0",
+    "grunt-cli": "^0.1.13"
+  }
+}

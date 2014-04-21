@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flappy Bird Clone</title>
+
+	<style>
+		body {
+			background-color: 	#ffa533;
+		}
+
+		h1, #pilas p{
+			color: white;
+			text-shadow: 2px 2px 4px black;
+			text-align: center;
+		}
+
+		#game {
+			margin: 0 auto;
+			width: 288px;
+			height: 511px;		
+		}
+
+		#pilas {
+			height: 50px;
+			width: 150px;
+			margin: 20px auto;
+		}
+
+	</style>
+</head>
+<body>
+
+<h1>Flappy Bird Clone</h1>
+
+  	<div id="game">
+		<canvas style="margin: 2%; border: 2px solid black;" id='canvas'></canvas>
+	</div>
+
+	<div id='pilas'>
+		<p>Powered by:<img src="data/asistente.png"></p>
+	</div>
+
+	<script src='pilasweb.js'></script>
+	<script src='flappybird.js'></script>
+
+	<script>
+	pilas = new Pilas();
+	pilas.onready = function() {
+		pilas.mundo.gestor_escenas.cambiar_escena(new FlappyGame());
+	}
+	pilas.iniciar({ancho: 288, alto: 511, data_path: 'data'});
+	pilas.ejecutar();
+	</script>
+</body>
+</html>
