@@ -1,4 +1,4 @@
-declare var pilas;
+	declare var pilas;
 
 class FlappyFondo extends Fondo {
 	constructor() {
@@ -148,13 +148,13 @@ class FlappyGame extends Base {
 
 	colisiones() {
 		for (var i in this.tubos) {
-			if (this.bird.derecha > this.tubos[i].izquierda &&
-			 	this.bird.izquierda < this.tubos[i].derecha && 
-			 	this.bird.arriba>this.tubos[i].abajo &&
-			 	this.bird.abajo<this.tubos[i].arriba ) {					
-				this.bird.muerto();
-				this.parar();
-				this.bird.x -= 2;				
+			if (this.bird.x+this.bird.radio_de_colision > this.tubos[i].izquierda &&
+			 	this.bird.x-this.bird.radio_de_colision < this.tubos[i].derecha && 
+			 	this.bird.y+this.bird.radio_de_colision>this.tubos[i].abajo &&
+			 	this.bird.y-this.bird.radio_de_colision<this.tubos[i].arriba ) {					
+					this.bird.muerto();
+					this.parar();
+					this.bird.x -= 2;				
 			}
 		}
 	}
