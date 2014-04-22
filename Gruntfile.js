@@ -13,9 +13,17 @@ module.exports = function(grunt) {
           }
         }
       },
+
+    watch : {
+      scripts : {
+        files: ['src/**'],
+        tasks : ['typescript']
+      }
+    }
   });
 
 
   grunt.loadNpmTasks('grunt-typescript');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.registerTask('default', ['typescript']);
 }
